@@ -1,0 +1,87 @@
+<nav class="navbar  navbar-expand-sm justify-content-between align-content-center navbar-dark">
+    <a class="navbar-brand  ml-5" href="#">
+        <img class="w-50" src="./../../assets/Home/logo.png" alt="">
+    </a>
+    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="wrapper">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav  m-auto mt-2 mt-lg-0 ">
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Categories
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <p *ngFor="let cat of cats" class="dropdown-item" routerLink="/cat/{{cat.id}}">{{cat.name}}</p>
+                    </div>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Reservations
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <p *ngFor="let cat of regesterationCats" class="dropdown-item" routerLink="/cat/{{cat.id}}">
+                            {{cat.name}}</p>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/Weekend">Yalla Holiday</a>
+                </li>
+            </ul>
+            <div class="form-inline form my-2 my-lg-0 ">
+                <input #inputSearch class="form-control mr-sm-2 " type="search " placeholder="Search "
+                    aria-label="Search " (input)="lookingFor($event) ">
+
+                <button id="searchBtn" class="btn  my-2 my-sm-0 " type="button"><i
+                        class="fas fa-search text-white"></i></button>
+                <div class=" searchResults bg-light d-block  rounded text-center w-100 ">
+                    <a class="d-block text-dark style-none py-1 w-100" *ngFor="let data of wanteddata "
+                        routerLink="/place/{{data.id}} "
+                        (click)="handlingSearch(inputSearch) ">{{data.name}}-{{data.id}}</a>
+                </div>
+            </div>
+
+
+            <div *ngIf="headerLoggedin == true || loggenfromlocalstorage==true ||ownerloggedinheader==true ||loggenfromlocalstorageOwner ==true   ; else loggedOut"
+                class="dropdown">
+                <button class="btn   dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+
+                    <i class="fas fa-user-circle text-light"></i>
+                    <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                        <ng-template #notAnOwner>
+                            <a routerLink="/user-profile" class="dropdown-item w-100 btn btn-danger">profile</a>
+                        </ng-template>
+
+
+                        <a *ngIf="ownerloggedinheader==true  ||loggenfromlocalstorageOwner ==true  ;else notAnOwner"
+                            routerLink="/ownerProfile" class="dropdown-item w-100 btn btn-danger">Owner profile</a>
+
+                        <a class="btn btn-danger dropdown-item" (click)="loggingOut()">logout</a>
+                    </div>
+                </button>
+
+            </div>
+        </div>
+
+        <li class="nav-item ">
+            <ng-template #loggedOut>
+                <a class="nav-link signup" routerLink="/register">SignUp</a>
+                <a class="nav-link signup" routerLink="/login">Login</a>
+            </ng-template>
+        </li>
+
+
+    </div>
+
+</nav>

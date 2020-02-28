@@ -1,0 +1,210 @@
+<div class="loading" *ngIf="!owenerplace">
+  loading...
+</div>
+
+<div *ngIf="owenerplace">
+  <h1>{{owenerplace.name}}</h1>
+  <p>{{owenerplace.desc}}</p>
+  <p>{{owenerplace.status}}</p>
+  <h2>{{owenerplace.id}}</h2>
+
+
+  <div *ngIf="ownerHistory">
+    <ul>
+      <li *ngFor="let i of ownerHistory" style="border: 1px red solid;">
+        histooooooryyy --{{i.totalPrice}}
+      </li>
+    </ul>
+
+  </div>
+
+  <div *ngIf="ownerOptions">
+    <ul>
+      <li *ngFor="let i of ownerOptions ; let ii=index" style="border:1px solid orange;">
+        optiooooooons--
+        <div *ngIf="editArr[ii]==true;">
+          <input class="{{i.id}}" type="text" value="{{i.name}}" (input)="checkingAllowAddEdited(i.id)">
+          <input class="{{i.id}}" type="text" value="{{i.desc}}" (input)="checkingAllowAddEdited(i.id)">
+          <input class="{{i.id}}" type="number" value="{{i.price}}" (input)="checkingAllowAddEdited(i.id)">
+          <button class="btn btn-primary" (click)="canselingEditOption(ii)">Cansel</button>
+          <button class="btn btn-danger" [disabled]="allowAddEdit==false"
+            (click)="addingEdtedOption(i,ii,i.id)">add</button>
+        </div>
+
+
+
+        <div *ngIf="editArr[ii]==false;">
+          <h2>{{i.name}}</h2>
+          <h3>{{i.desc}}</h3>
+          <h3>{{i.price}}</h3>
+          <h3>---{{i.id}}--{{i}}</h3>
+          <button class="btn btn-danger" (click)="deletinOption(i.id)">delete</button>
+          <button class="btn btn-primary" (click)="editOption(ii,i.id)">edit</button>
+        </div>
+
+      </li>
+    </ul>
+
+  </div>
+
+</div>
+
+
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+  edit place
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- ..............place form .................// -->
+        <div class="d-flex flex-column" *ngIf="owenerplace">
+
+
+          <input #placeNName placeholder="place name" (input)="verfyingPlcae(placeNName,
+          contact,address,location,desc,openHoursEnd,openHoursStart )" value={{owenerplace.name}}>
+          <!-- <div class="errormsg" *ngIf="placeNName.value.length==0">
+            *requeired -->
+          <!-- </div> -->
+
+          <input #contact placeholder="contact" (input)="verfyingPlcae(placeNName,
+          contact,address,location,desc,openHoursEnd,openHoursStart )" value={{owenerplace.contact.phone}}>
+          <!-- <div class="errormsg" *ngIf="11>contact.value.length">
+            *requeired
+          </div> -->
+
+          <input #address placeholder="address" (input)="verfyingPlcae(placeNName,
+          contact,address,location,desc,openHoursEnd,openHoursStart )" value={{owenerplace.address}}>
+          <!-- <div class="errormsg" *ngIf="5>address.value.length">
+            *requeired
+          </div> -->
+
+
+          <input #location placeholder="location" (input)="verfyingPlcae(placeNName,
+          contact,address,location,desc,openHoursEnd,openHoursStart )" value={{owenerplace.location}}>
+          <!-- <div class="errormsg" *ngIf="10>location.value.length">
+            *requeired
+          </div> -->
+
+
+          From :<input #openHoursStart type="time" placeholder="" (input)="verfyingPlcae(placeNName,
+          contact,address,location,desc,openHoursEnd,openHoursStart )">To
+          <input #openHoursEnd type="time" placeholder="" (input)="verfyingPlcae(placeNName,
+          contact,address,location,desc,openHoursEnd,openHoursStart )">
+          <!-- <div class="errormsg" *ngIf="5>openHoursStart.value.length || 5>openHoursEnd.value.length">
+            *requeired
+          </div> -->
+
+
+          <input #desc placeholder="description" (input)="verfyingPlcae(placeNName,
+          contact,address,location,desc,openHoursEnd,openHoursStart,true )" value={{owenerplace.desc}}>
+          <!-- <div class="errormsg" *ngIf="10>desc.value.length">
+            *requeired
+          </div> -->
+
+          <input #imgPlace type="file" (change)="readURL2($event)">
+
+          <div class="btn-group mt-4">
+            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              status: <span *ngIf="statusOwner">{{statusOwnerText}}</span>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" value="open now" (click)="gettingStatus($event)">open now</a>
+              <a class=" dropdown-item" value="closed" (click)="gettingStatus($event)">closed</a>
+            </div>
+          </div>
+
+          <div class="btn-group mt-4">
+            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Reservation:<span *ngIf="reservationOwner">{{reservationOwnerText}}</span>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" value="true" (click)="gettingReservation($event)">Yes</a>
+              <a class=" dropdown-item" value="false" (click)="gettingReservation($event)">No</a>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+            aria-expanded="false" aria-controls="collapseExample">
+            select categories
+          </button>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              <div *ngFor="let place of cats ;let item = index;">
+                <input #item id="{{place.id}}" class="categories" type="checkbox" name="{{item}}" value={{place.name}}
+                  (click)="selectingCats()">
+                <label for="vehicle3">{{place.name}}</label>
+              </div>
+            </div>
+          </div>
+          <div class="errormsg" *ngIf=" celectedArr.length == 0 || celectedArr.length>3">
+            *requeired and maximum 3 categories
+          </div>
+
+          <div class="btn-group mt-4">
+            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              kids-Friendly:<span *ngIf="kidsOwner">{{kidsOwnerText}}</span>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" value="true" (click)="gettingKidsArea($event)">Yes</a>
+              <a class=" dropdown-item" value="false" (click)="gettingKidsArea($event)">No</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ............................................./// -->
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" [disabled]="chechDiv == false" class="btn btn-primary" (click)="addPlaceToThisOwner()"
+          data-dismiss="modal">Save
+          changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<button *ngIf="optionCheck==false" (click)="addOption()">Add Option</button>
+<div *ngIf="optionCheck==true">
+
+  <input #OptionName placeholder="Option Name" (input)="verfyingOption(OptionName,optionDesc,optionPrice)">
+  <div class="errormsg" *ngIf="OptionName.value.length==0">
+    *requeired
+  </div>
+
+  <input #optionDesc placeholder="Option desc" (input)="verfyingOption(OptionName,optionDesc,optionPrice)">
+  <div class="errormsg" *ngIf="optionDesc.value.length==0">
+    *requeired
+  </div>
+
+  <input #optionPrice placeholder="Option price" type="number"
+    (input)="verfyingOption(OptionName,optionDesc,optionPrice)">
+  <div class="errormsg" *ngIf="optionPrice.value.length==0">
+    *requeired
+  </div>
+  <input #imgOption type="file" (change)="readURL($event)">
+
+  <button [disabled]="OptionValid==true" (click)="submitiingEditedPlace()">Submit</button>
+  <button (click)="canseliing()">cansel</button>
+</div>

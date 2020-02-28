@@ -1,0 +1,36 @@
+<div class="wrapper m-auto ">
+    <div class="row ">
+        <div class="col-6">
+            <form class="form-group form col-12  " [formGroup]='holidayForm' (ngSubmit)="onSubmit(holidayForm)">
+                <div class="Date">
+                    <label for="">Date</label>
+                    <input formControlName="date" type="date" class="form-control" name="" id="date" aria-describedby="helpId" placeholder="">
+                </div>
+
+                <div class="time px-0 col-12">
+                    <label for="time" class="mr-5 " for="">Time</label>
+                    <input formControlName="time" type="time" name="time" id="from" class="form-control mb-0 col-12" placeholder="" aria-describedby="helpId" value="12:00">
+                    <label for="endtime" class="mr-2" for="">to</label>
+                    <input formControlName="endTime" type="time" name="endtime" id="to" class="form-control col-12" placeholder="" aria-describedby="helpId" value="12:00">
+                </div>
+
+                <div class="sendMessage">
+                    <p class="px-0 col-12">Send message to your current email</p>
+                    <input class="mr-2" type="radio" id="send" name="sendEmail" value="myEmail" checked>
+                    <label class="mr-5" for="male">yes</label>
+                    <input class="mr-2" type="radio" id="notSend" name="sendEmail" value="newEmail">
+                    <label for="female">no</label>
+                </div>
+
+                <div class="email">
+                    <input formControlName="email" type="email" class="form-control" name="" id="email" aria-describedby="helpId" placeholder="Email">
+                </div>
+                <button type="submit" [disabled]="!holidayForm.valid" class="btn btn-primary col-12">Submit</button>
+            </form>
+        </div>
+        <div class="userName col-6 text-center" *ngFor="let n of user">
+            <h1 class="text-danger"> {{n.name}} </h1>
+        </div>
+    </div>
+
+</div>

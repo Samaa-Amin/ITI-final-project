@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Blueberry-Regular';
+  src: url('Blueberry-Regular.eot');
+  src: url('Blueberry-Regular.eot?#iefix') format('embedded-opentype'),
+       url('Blueberry-Regular.svg#Blueberry-Regular') format('svg'),
+       url('Blueberry-Regular.ttf') format('truetype'),
+       url('Blueberry-Regular.woff') format('woff'),
+       url('Blueberry-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

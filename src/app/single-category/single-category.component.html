@@ -1,0 +1,299 @@
+<section class="category ">
+  <section class="category-wrapper row">
+    <div class="loading" *ngIf="!singleCatData">
+      loading...
+    </div>
+
+    <!-- <div class="canvas" *ngIf="singleCatData ">
+      <div class="filter-canvas"> 
+        <button class="btn btn-primary ">{{singleCatData.name}}</button>
+      </div>
+    </div>  -->
+
+
+    
+
+
+
+
+
+
+
+
+
+    <div class="home" routerLink="/">
+      
+      <svg  height="40" width="90" class="svg">
+        <polygon points="0,0 70,0 90,20 70,40 0,40" style="fill-rule:nonzero;">
+        </polygon>
+        <!-- <text fill="#111" font-size="10" font-family="Verdana" x="23" y="23"><i class="fas fa-home"></i></text> -->
+      </svg>
+    </div>
+    
+    <div class="cat-name" *ngIf="singleCatData" >
+      <svg height="40" width="120">
+        <polygon points="0,0 70,0 90,20 70,40 0,40 20,20" style="fill-rule:nonzero;">
+        </polygon>
+        <text fill="#111" font-size="10" font-family="Verdana" x="23" y="23">{{singleCatData.name}}</text>
+      </svg>
+  </div>
+  
+  <section class="category-wrapper__containt flex-wrap d-flex col-md-12 col-sm-12 p-0" *ngIf="singleCatData ">
+    
+    
+      <!-- start filter section -->
+      <div class="filter col-md-3 col-sm-12">
+
+        <div class="filter-header d-md-flex align-items-baseline">
+          <i class="fas fa-sort-down "></i>
+          <h3>Filter by:</h3>
+        </div>
+
+        <div class="filter-content  d-flex flex-column justify-content-between offset-1 col-sm-12">
+          <!-- filter-location -->
+
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+            aria-expanded="false" aria-controls="collapseExample">
+            Location
+          </button>
+
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              <div *ngFor="let place of uniqe ;let item = index;">
+                <input #item id="{{place}}" class="location" type="checkbox" name="{{item}}" value={{place}}
+                  (click)="handling(reservation,status,kidfriendly, one, two, three, four, five)">
+                <label for="vehicle3">{{place}}</label>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- filter-rate -->
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample2"
+            aria-expanded="false" aria-controls="collapseExample">
+            Rate
+          </button>
+
+          <div class="collapse" id="collapseExample2">
+            <div class="card card-body">
+              <div>
+                <input #five type="checkbox" name="5" value="5"
+                  (click)="handling(reservation,status,kidfriendly, one, two, three, four, five)">
+                <label for="vehicle3">
+                  <svg height="25" width="25" class="star rating">
+                    <polygon points="9.9, 1.1, 3.3 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78" style="fill-rule:nonzero;">
+                    </polygon>
+                  </svg>
+                  <svg height="25" width="25" class="star rating">
+                    <polygon points="9.9, 1.1, 3.3 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78" style="fill-rule:nonzero;">
+                    </polygon>
+                  </svg>
+                  <svg height="25" width="25" class="star rating">
+                    <polygon points="9.9, 1.1, 3.3 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78" style="fill-rule:nonzero;">
+                    </polygon>
+                  </svg>
+                  <svg height="25" width="25" class="star rating">
+                    <polygon points="9.9, 1.1, 3.3 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78" style="fill-rule:nonzero;">
+                    </polygon>
+                  </svg>
+                  <svg height="25" width="25" class="star rating">
+                    <polygon points="9.9, 1.1, 3.3 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78" style="fill-rule:nonzero;">
+                    </polygon>
+                  </svg>
+                </label>
+              </div>
+              <div>
+                <input #four type="checkbox" name="4" value="4"
+                  (click)="handling(reservation,status,kidfriendly, one, two, three, four, five)">
+                <label for="vehicle3">
+                  <svg height="25" width="25" class="star rating">
+                    <polygon points="9.9, 1.1, 3.3 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78" style="fill-rule:nonzero;">
+                    </polygon>
+                  </svg>
+                  <svg height="25" width="25" class="star rating">
+                    <polygon points="9.9, 1.1, 3.3 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78" style="fill-rule:nonzero;">
+                    </polygon>
+                  </svg>
+                  <svg height="25" width="25" class="star rating">
+                    <polygon points="9.9, 1.1, 3.3 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78" style="fill-rule:nonzero;">
+                    </polygon>
+                  </svg>
+                  <svg height="25" width="25" class="star rating">
+                    <polygon points="9.9, 1.1, 3.3 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78" style="fill-rule:nonzero;">
+                    </polygon>
+                  </svg>
+                </label>
+              </div>
+              <div>
+                <input #three type="checkbox" name="3" value="3"
+                  (click)="handling(reservation,status,kidfriendly, one, two, three, four, five)">
+                <label for="vehicle3">
+                  <svg height="25" width="25" class="star rating">
+                    <polygon points="9.9, 1.1, 3.3 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78" style="fill-rule:nonzero;">
+                    </polygon>
+                  </svg>
+                  <svg height="25" width="25" class="star rating">
+                    <polygon points="9.9, 1.1, 3.3 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78" style="fill-rule:nonzero;">
+                    </polygon>
+                  </svg>
+                  <svg height="25" width="25" class="star rating">
+                    <polygon points="9.9, 1.1, 3.3 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78" style="fill-rule:nonzero;">
+                    </polygon>
+                  </svg>
+                </label>
+              </div>
+              <div>
+                <input #two type="checkbox" name="2" value="2"
+                  (click)="handling(reservation,status,kidfriendly, one, two, three, four, five)">
+                <label for="vehicle3">
+                  <svg height="25" width="25" class="star rating">
+                    <polygon points="9.9, 1.1, 3.3 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78" style="fill-rule:nonzero;">
+                    </polygon>
+                  </svg>
+                  <svg height="25" width="25" class="star rating">
+                    <polygon points="9.9, 1.1, 3.3 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78" style="fill-rule:nonzero;">
+                    </polygon>
+                  </svg>
+                </label>
+              </div>
+              <div>
+                <input #one type="checkbox" [id]="samaa" name="1" value="1"
+                  (click)="handling(reservation,status,kidfriendly, one, two, three, four, five)">
+                <label for="vehicle3">
+                  <svg height="25" width="25" class="star rating">
+                    <polygon points="9.9, 1.1, 3.3 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78" style="fill-rule:nonzero;">
+                    </polygon>
+                  </svg>
+                </label>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- filter-reservation -->
+
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample3"
+            aria-expanded="false" aria-controls="collapseExample">
+            Reservation
+          </button>
+
+          <div class="collapse" id="collapseExample3">
+            <div class="card card-body">
+              <div>
+                <input #reservation type="checkbox" name="reservation" value="reservation"
+                  (click)="handling(reservation,status,kidfriendly,one, two, three, four, five)">
+                <label for="reservation">online reservation</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- filter-status -->
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample4"
+            aria-expanded="false" aria-controls="collapseExample">
+            status
+          </button>
+
+          <div class="collapse" id="collapseExample4">
+            <div class="card card-body">
+              <div>
+                <input #status type="checkbox" name="status" value="status"
+                  (click)="handling(reservation,status,kidfriendly, one, two, three, four, five)">
+                <label for="status">open</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- filter-kid-friendly -->
+
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample5"
+            aria-expanded="false" aria-controls="collapseExample">
+            Kid-friendly
+          </button>
+
+          <div class="collapse" id="collapseExample5">
+            <div class="card card-body">
+              <div>
+                <input #kidfriendly type="checkbox" name="kid-friendly" value="kid-friendly"
+                  (click)="handling(reservation,status,kidfriendly, one, two, three, four, five)">
+                <label for="kid-friendly">kid-friendly</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===========================end filter================================ -->
+
+      <div class="places col-md-9 p-0 col-sm-12">
+        <div class="place-nav ">
+          <ul class="d-flex justify-content-between col-md-4 ">
+            <li>sort by</li>
+            <li>newest places</li>
+            <li (click)='listview()' [ngStyle]="{'color':list === true ? 'black' : 'gray' }"><i
+                class="fas fa-th-list"></i></li>
+            <li (click)='galleryview()' [ngStyle]="{'color':gallery === true ? 'black' : 'gray' }"><i
+                class="fas fa-th-large"></i></li>
+          </ul>
+        </div>
+
+        <div class="place-contents"
+          [ngClass]="{ 'd-flex flex-wrap  justify-content-around col-md-12  ': gallery==true}">
+          <div *ngFor="let place of pageOfItems card-body" [ngClass]="{'col-md-5  ':gallery === true}"
+            class="place-content__item d-flex flex-wrap">
+
+            <div class="place-content__item-img col-md-4 " routerLink="/place/{{place.id}}"
+              [ngClass]="{'col-md-12':gallery===true}">
+              <!-- <img
+                src="https://previews.123rf.com/images/dmytrohrynchak/dmytrohrynchak1809/dmytrohrynchak180900047/110250054-table-tennis-ping-pong-table-tennis-player-athlete-game-vector.jpg"
+                alt=""> -->
+                <img src="{{place.mainImage}}" alt="">
+               
+            </div>
+
+            <div class="place-content__item-body col-md-8 col-sm-12 "
+              [ngClass]="{'col-md-12 mt-sm-4':gallery === true } ">
+
+
+
+              <!--================= fav icon============== -->
+            <div class="placeName d-flex flex-row align-items-center">
+              <h2 routerLink="/place/{{place.id}}" class="mr-2">{{place.name}}</h2>
+
+              <a *ngIf="placeLoggedin==true" (click)="checkingFavs(place)" class="fav">
+                <i *ngIf='checkFav[place.id]==true; else emptyHeart' class="fas fa-heart solid"></i>
+                <ng-template #emptyHeart>
+                  <i class="far fa-heart emptyHeart" id="emptyHeart"></i>
+                </ng-template>
+              </a>
+
+            </div>
+              <!-- <a *ngIf="placeLoggedin==true" (click)="checkingFavs(place)">
+                <i [ngStyle]='{color:checkFav[place.id]==true?"red":"black"}' class="fas fa-heart"></i>
+              </a> -->
+              <i *ngFor="let star of place.rates" class="fas fa-star"></i>
+
+              <h5>{{place.location}}</h5>
+              <p>{{place.desc}}</p>
+              <!-- <p>{{place["kid-friendly"]}}</p> -->
+              <p class="open" *ngIf="place.status=='open now'"> open now</p>
+              <p class="closed" *ngIf="place.status=='closed'"><i class="fas fa-times-circle"></i> closed</p>
+              <p class="reservation" *ngIf="place.reservation=='true'">online-reservation</p>
+              <p class="reservation" *ngIf="place.reservation=='false'">no-reservation</p>
+            </div>
+          </div>
+
+          
+        </div>
+        <!-- pagination footer -->
+
+        <div class=" pb-0 pt-3 d-flex justify-content-center">
+          <jw-pagination [items]="filteredData" (changePage)="onChangePage($event)"></jw-pagination>
+      </div>
+
+      </div>
+
+
+    </section>
+  </section>
+</section>

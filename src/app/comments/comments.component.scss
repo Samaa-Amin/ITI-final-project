@@ -1,0 +1,182 @@
+figure img{
+    border-radius: 50%;
+}
+.container-font{
+  font-family: 'Poppins', sans-serif;
+}
+.cutom-btn{
+    background-color: orange;
+    color: #fff;
+}
+.custom-input{
+    width: 50%;
+}
+.specific-progress{
+    display: inline-block;
+    height: 12px;
+    width: 24%;
+  }
+  
+  .specific-progress-warning
+  {
+    height: 20px;
+    display: inline-block;
+    background-color: #ffa21d;
+  }
+  .full-start-color{
+    color: #ffa21d;
+  }
+  .empty-start-color{color: #ddd;}
+  .reviewsRange h3{
+    height: 45px;
+    font-size: 32px;
+    color: #ffa21d;
+    font-weight: normal;
+  }
+  .userComm-section{
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 30px;
+  }
+  .add-comm{
+      padding: 20px 0 0 0;
+  }
+  
+  .rate-commts{
+      .userName{
+          font-size: 16px;
+          text-transform: capitalize;
+      }
+  }
+  .reviewsWrite{
+    color: #ffa21d;
+    font-size:25px
+  }
+  .all-comm{
+      background-color: #fff;
+  }
+  .custome-input{
+    border: none;
+  }
+
+  polygon {
+    fill: orange;
+  }
+  polygon.empty-start-color{
+    fill: #ddd;
+  }
+  .dropDownList{
+    list-style: none;
+    padding: 0;
+    width: 134px;
+    border: 1px solid;
+    text-align: center;
+  }
+  .dropDownList li{padding: 7px 15px;}
+  // ul:before{
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  //   right: 87%;
+  //   width: 0;
+  //   height: 0;
+  //   top: 21px;
+  //   border-style: solid;
+  //   border-width: 0 7px 11px 7px;
+  //   border-color: transparent transparent #007bff transparent;
+  // }
+  .toggleIcon{
+    color: rgb(189, 188, 188);
+    font-size: 25px;
+    cursor: pointer;
+  
+  }
+  // .rate-commts:hover .toggleIcon{
+  //   display: block;
+  // }
+  .editContainer{
+    display: none;
+  }
+  .rate-commts:hover .editContainer{
+    display: block;
+  }
+  // .editContainer2{
+  //   display: block;
+  // }
+  .deleteBtn{
+    color: red;
+    border: 1px solid red;
+    width: 59px;
+    font-size: 10px;
+    margin: 0;
+    height: 29px;
+    padding: 0;
+  }
+  .deleteBtn:hover{
+    background-color: red;
+    color: white;
+  }
+  .editBtn{
+    width: 59px;
+    font-size: 10px;
+    margin: 0;
+    height: 29px;
+    padding: 0;
+  }
+  .inputEdit{
+    border: 1px solid #ddd;
+    width: 360px;
+    height: 112px;
+    padding: 9px 30px;
+    position: relative;
+  }
+  .inputEditMob{
+    height: 65px;
+    padding: 0;}
+  .saveBtn{
+    position: absolute;
+    bottom: 11px;
+    left: 50%;
+    width: 73px;
+    font-size: 10px;
+    margin: 0;
+    height: 29px;
+    padding: 0;
+    background-color: #ffa21d;
+    color: white;
+  }
+  .comment-para{
+    font-size: 14px;
+  }
+  textarea { font-size: 14px; }
+  .saveBtnMob{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 37px;
+    margin-top: 10px;
+  }
+  .input-custome{
+    width: 76%;
+    height: 10%;
+    padding: 7px;
+    border: 1px solid #ddd;
+    border-right: none;
+  }
+  .customize-btn{
+    background: #ffa21d;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    color: #fff;
+  }
+  ::placeholder{
+    font-size: 14px;
+  }
+
+  // mobile cases========================
+  .deleteBtnMob , .editBtnMob{
+    font-size: 14px;
+    color: rgb(209, 207, 207);
+  }
+  // .deleteBtnMob {color: red;}
+  // .editBtnMob{color: green;}

@@ -1,0 +1,198 @@
+@import './../../styles.scss';
+@font-face {
+    font-family: blueburry;
+    src: url("./../../assets/fonts/blueberry/Blueberry-Regular.ttf");
+}
+
+@font-face {
+    font-family: caviardreams;
+    src: url("./../../assets/fonts/caviar_dreams/CaviarDreams_Bold.ttf");
+}
+
+.wrapper {
+    width: 85%;
+}
+
+.hero {
+    background-image: url("./../../assets/Home/hero.svg");
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
+    .wrapper {
+        width: 90%;
+        h1 {
+            color: $hcolors;
+            padding-top: 15%;
+            font-size: 70px;
+            line-height: 0.43;
+            letter-spacing: 1.74px;
+            font-family: blueburry;
+        }
+    }
+}
+
+.yallaNo5rog {
+    background-image: url("./../../assets/Home/bg-left.svg");
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: bottom;
+    .caption {
+        padding-top: 5%;
+        h2 {
+            font-size: $h2;
+            color: $hcolors;
+            text-transform: capitalize;
+            font-family: caviardreams;
+        }
+        p {
+            font-size: $paragrphSize;
+            margin: $pargraphMargin 0;
+        }
+    }
+    .first {
+        transform: rotate(-25deg);
+    }
+    .layer {
+        transform: rotate(25deg) translateY(-21rem) translateX(-20rem);
+    }
+}
+
+.aboutUs {
+    background-image: url('./../../assets/Home/bg-right.svg');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    padding-bottom: 30rem;
+    .aboutUs-caption {
+        padding-top: 5%;
+        h2 {
+            font-family: caviardreams;
+            font-size: $h2;
+            text-transform: capitalize;
+            line-height: 1.27;
+            margin-bottom: $pargraphMargin;
+            color: $hcolors;
+        }
+        .details {
+            margin-bottom: $pargraphMargin;
+            p {
+                font-size: $paragrphSize;
+                line-height: 1.2;
+                font-weight: 400;
+            }
+            i {
+                font-size: $paragrphSize;
+            }
+        }
+    }
+    .slider-side {
+        position: relative;
+        .wallpaper {
+            width: 95%;
+            height: 27rem;
+            border-radius: 30px;
+            background-color: $hcolors;
+        }
+        .slider {
+            border-radius: 16px;
+            // transform: translateY(-200px);
+            position: absolute;
+            top: 5rem;
+            right: 10%;
+            left: 10%;
+            .slide {
+                top: 0;
+                border-radius: 50px;
+            }
+        }
+    }
+}
+
+.signUp {
+    background-image: url("./../../assets/Home/viviana-rishe-_6cuFnt_qCs-unsplash.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+    margin-bottom: $sectionMargin;
+    .overlay {
+        height: 100%;
+        width: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.3);
+    }
+    .wrapper {
+        padding: 8%;
+        h2 {
+            font-family: caviardreams;
+            font-size: $h2;
+            color: #fff;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+        }
+        a {
+            font-size: 27px;
+            border: none;
+            border-radius: 20px;
+        }
+    }
+}
+
+.recommended {
+    h2 {
+        font-family: caviardreams;
+        color: $hcolors;
+        text-transform: capitalize;
+        font-size: 4rem;
+    }
+    .wrapper {
+        img {
+            border-radius: 16px;
+        }
+        .video {
+            position: relative;
+            .overlay {
+                position: absolute;
+                top: 0;
+                bottom: 25%;
+                left: 0;
+                right: 0;
+                border-radius: 16px;
+                background-color: rgba($color: #000000, $alpha: 0.6);
+                a {
+                    color: #fff;
+                    cursor: pointer;
+                    position: absolute;
+                    top: 45%;
+                    bottom: 45%;
+                    left: 40%;
+                    right: 40%;
+                }
+                h3 {
+                    font-family: caviardreams;
+                    color: #fff;
+                    font-size: $h3;
+                    position: relative;
+                    align-items: end;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .yallaNo5rog {
+        .first {
+            transform: translateX(-5rem) rotate(-25deg);
+        }
+    }
+    .aboutUs {
+        .wallpaper {
+            width: 100%;
+            height: 15rem;
+        }
+        .slider {
+            width: 70%;
+            margin: 0 auto;
+        }
+        ;
+    }
+}

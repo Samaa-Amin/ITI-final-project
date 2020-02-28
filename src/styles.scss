@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+// spacing style
+$sectionMargin:7%;
+$pargraphMargin:3rem;
+$wrapper:90%;
+$wrapperMargin:0 auto;
+// fonts style
+$h2:4.5rem;
+$h3:3.5rem;
+$paragrphSize:2rem;
+$hcolors:#ffa21d;
+// general style
+* {
+    // font-size: 10px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+input:focus {
+    outline-color:transparent;
+    outline-style: none;
+    outline-width: 0px;;
+    outline-offset: 0px;
+}

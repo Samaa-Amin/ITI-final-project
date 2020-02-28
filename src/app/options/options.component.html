@@ -1,0 +1,17 @@
+<h4 class="game-name pt-2 pb-2">{{i.name}}</h4>
+<!-- <img *ngFor="let x of i.imgs" src="{{x}}"> -->
+<div class="game-img">
+    <img src="{{i.img}}" class="game-img pt-2 pb-4">
+</div>
+<h5 class="game-price pl-3 pr-3"> {{i.price}} <span style="font-size: 10px;">EGP</span></h5>
+<hr>
+<p class="pl-3 pr-3 game-desc">{{i.desc}}</p>
+<hr>
+<div style="text-align: center;" class="game-count pb-3">
+  <button type="button" class="btn btn-dark m-1" (click)="removingOption(i.price,i)">-</button>
+<span>{{count}}</span>
+<button type="button" class="btn btn-dark m-1" (click)="addingOption(i.price,i)">+</button>  
+</div>
+
+<!-- <p>total-{{totalOfOneGame}}</p>
+<h1>{{total}}</h1> -->

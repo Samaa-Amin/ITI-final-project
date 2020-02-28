@@ -1,0 +1,103 @@
+<div class="container-fluid">
+  <div class="wrapper m-auto">
+    <!-- userImg -->
+    <div class="addimg">
+      <div class="avatar-upload">
+        <div class="avatar-edit">
+          <input type="file" id="imageUpload" accept=".png, .jpg, .jpeg" (change)="readURL($event)" />
+          <label for="imageUpload"></label>
+        </div>
+
+        <div *ngIf='user.image else elseBlock' class="avatar-preview">
+          <img id="imagePreview" [src]="user.image" #Datavalue />
+        </div>
+        <ng-template #elseBlock>
+          <img id="imagePreview" [src]="imageSrc" #Datavalue />
+        </ng-template>
+
+      </div>
+    </div>
+
+    <!-- username -->
+    <div class="userName">
+      <h1>{{user.name}}</h1>
+    </div>
+
+
+
+    <button (click)="showEditForm()">edit your data</button>
+    <div *ngIf="toggle" class="userDataForm">
+      <form class="form-group container" [formGroup]='myForm'>
+        <div class="name">
+          <input #nameVal formControlName="name" placeholder="edit your name">
+        </div>
+        <div class="text-danger my-1" *ngIf="myForm.get('name').hasError('required') && myForm.touched">
+          this name is requeired
+        </div>
+
+        <div class="email">
+          <input #mailVal formControlName="email" placeholder="edit Your email">
+        </div>
+        <div class="text-danger my-1" *ngIf="myForm.controls.email.hasError('pattern')">
+          mail must be "abc@abc.com"
+        </div>
+        <div class="text-danger my-1" *ngIf="myForm.controls.email.hasError('required') && myForm.touched ">
+          mail is requeired
+        </div>
+
+        <button [disabled]="!myForm.valid" data-toggle="modal" data-target="#exampleModal" >save changes</button>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">confirm password to continue</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="password">
+                  <input #pass placeholder="enter your password" type="password">
+                </div>
+                <button (click)="checkPass(pass,nameVal,mailVal)" type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- edit data -->
+
+
+
+    <!-- placesData -->
+    <h1>history</h1>
+    <div *ngFor='let fav of userFavouritesPlaces ' style="margin-bottom: 100px;">
+      <ul [id]=fav.id>
+        <li>
+          <a routerLink="/place/{{fav.id}}">{{fav.name}}</a>
+        </li>
+        <li>
+          <p>{{fav.address}}</p>
+        </li>
+        <li>
+          <p>{{fav.location}}</p>
+        </li>
+        <li>
+          <p>{{fav.desc}}</p>
+        </li>
+        <button (click)="removeFav($event)">remove</button>
+      </ul>
+    </div>
+
+    <!-- <div class=" pb-0 pt-3 d-flex justify-content-center">
+      <jw-pagination [items]="userFavouritesPlaces" (changePage)="onChangePage($event)"></jw-pagination>
+  </div> -->
+
+
+
+  </div>
+</div>

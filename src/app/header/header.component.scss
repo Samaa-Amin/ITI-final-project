@@ -1,0 +1,69 @@
+@import './../../styles.scss';
+nav {
+    z-index: 9999;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    margin: 0 auto;
+    position: fixed;
+    width: 100%;
+    .wrapper {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    
+    li {
+        a {
+            font-size: 16px;
+            color: #fff;
+            white-space: nowrap;
+            padding-right: 40px;
+        }
+        a:hover {
+            color: #ffa21d;
+        }
+        p {
+            cursor: pointer;
+        }
+    }
+    i {
+        font-size: 18px;
+    }
+    .form {
+        position: relative;
+        input {
+            display: none;
+            font-size: 14px;
+        }
+        .searchResults {
+            position: absolute;
+            left: 0.5%;
+            top: 100%;
+            z-index: 9999;
+            a {
+                text-decoration: none;
+                font-size: 16px;
+            }
+        }
+    }
+}
+.navbar-brand {
+    width: 6%;
+}
+.navbar-brand img{
+    max-width: 100%;
+}
+
+@media screen and (max-width:560px) {
+    nav {
+        position: static;
+        background-color: #000000;
+    }
+}
+.nav-item{
+    list-style: none;
+}
+.signup{
+    color: #ffa21d;
+    font-size: 16px;
+    font-weight: 500;
+}

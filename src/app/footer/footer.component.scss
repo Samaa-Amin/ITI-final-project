@@ -1,0 +1,51 @@
+footer {
+    background-image: url("./../../assets/Home/footer.svg");
+    background-size: cover;
+    
+    .wrapper {
+        width: 90%;
+        margin: 0 auto;
+        padding: 14% 0 5% 0;
+        border-bottom: 2px solid #fff;
+        figure {
+            font-size: 0;
+        }
+        h5 {
+            color: #ffa21d;
+            font-weight: bold;
+        }
+        p {
+            color: #fff;
+            font-size: 16px;
+            list-style: none;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+            margin: 15px;
+            cursor: pointer;
+        }
+    }
+    .copyRight {
+        width: 50%;
+        p {
+            font-size: 12px;
+            color: #fff;
+            span {
+                color: #ffa21d;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:992px) {
+    footer {
+        text-align: center;
+        .followUs {
+            justify-content: center;
+        }
+    }
+}
+i{
+    font-size: 16px;
+}

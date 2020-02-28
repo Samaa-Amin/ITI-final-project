@@ -1,0 +1,274 @@
+
+.login{
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white;
+ background-image: linear-gradient(rgba(111, 111, 111, 0.5), rgba(111, 111, 111, 0.5)),  url("https://i.postimg.cc/26pXNcnN/carnival-3008102.jpg");
+
+}
+
+
+.form-wrapper{
+  background-color: #111;
+  height: 90vh;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  margin: 5rem;
+  border-radius: 30px;
+  
+  
+}
+    .owner{
+      height: 350vh;
+    }
+    .place-form{
+      height: 200vh;
+    }
+@media (max-width:500px){
+  .form-wrapper{
+      margin: 0;
+      border-radius: 0;
+  }
+}
+  
+  .logo {
+    color: #ffa21d;
+    margin-top: 0;
+    width: 30%;
+    margin: 0 auto;
+  }
+  form {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-content: center;
+    height: 90%;
+    width: 90%;
+    margin: 0 auto;
+    
+  }
+  .email,
+  .password,
+  .name,
+  .confirmpass {
+    display: flex;
+    flex-flow: column;
+    border-bottom: 1px solid #ddd;
+    
+  }
+  .email input,
+  .password input,
+  .name input,
+  .confirmpass input {
+    border: none;
+    background: none;
+    // padding: 10px;
+    color: #ddd;
+    width: 100%;
+    padding-left: 0;
+    padding-top: 0;
+    font-size: 14px;
+   
+  }
+  // .email label,
+  // .password label,
+  // .name label,
+  // .confirmpass label {
+  //   text-align: left;
+  //   color: #999;
+  //   font-size: 1rem;
+  //   text-transform: capitalize;
+  //   margin-bottom: 0;
+  //   margin-top: 10px;
+  //   font-weight: 500;
+  //   font-size: 14px;
+  //   color: #111;
+  // }
+  input::placeholder {
+    text-transform: capitalize;
+    font-size:14px;
+    // color: #ddd;
+    
+  }
+  
+  .checkbox {
+    display: flex;
+    align-items: center;
+  }
+  .checkbox input {
+    background-color: #999;
+  }
+  .checkbox label {
+    margin: 0;
+    padding-left: 5px;
+    color: #ddd;
+    font-size: 14px;
+  }
+  button {
+    border: none;
+    padding: 8px 35px;
+    border-radius: 30px;
+    background-color: #ffa21d;
+    align-content: center;
+    color: white;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-top: 20px;
+  }
+  .loginbtn {
+    font-size: 12px;
+    color: #ddd;
+
+    
+    
+  }
+  
+  .loginbtn span {
+    color: #ffa21d;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  .errormsg {
+    color:   #dd583f;
+    font-size: 10px;
+    text-transform: capitalize;
+}
+  
+.opentime p{
+  color: #ddd;
+  font-size: 14px;
+}
+.file{
+  color: #ddd;
+}
+// light version
+
+// .login{
+  
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-color: white;
+//  background-image: linear-gradient(rgba(111, 111, 111, 0.5), rgba(111, 111, 111, 0.5)),  url("https://i.postimg.cc/26pXNcnN/carnival-3008102.jpg");
+
+// }
+
+// .form-wrapper{
+//   background-color: rgba(255, 255, 255,0.9);
+//   height: 90vh;
+//   text-align: center;
+//   display: flex;
+//   flex-flow: column;
+//   justify-content: space-around;
+//   margin: 5rem;
+//   border-radius: 30px;
+// }
+// @media (max-width:500px){
+//   .form-wrapper{
+//       margin: 0;
+//       border-radius: 0;
+//   }
+// }
+  
+//   .logo {
+//     color: #ffa21d;
+//     margin-top: 0;
+//     width: 30%;
+//     margin: 0 auto;
+//   }
+//   form {
+//     display: flex;
+//     flex-flow: column;
+//     justify-content: space-between;
+//     align-content: center;
+//     height: 90%;
+//     width: 90%;
+//     margin: 0 auto;
+    
+//   }
+//   .email,
+//   .password,
+//   .name,
+//   .confirmpass {
+//     display: flex;
+//     flex-flow: column;
+//     border-bottom: 1px solid #999;
+    
+//   }
+//   .email input,
+//   .password input,
+//   .name input,
+//   .confirmpass input {
+//     border: none;
+//     background: none;
+//     // padding: 10px;
+//     color: #111;
+//     width: 100%;
+//     padding-left: 0;
+//     padding-top: 0;
+//     font-size: 14px;
+   
+//   }
+//   .email label,
+//   .password label,
+//   .name label,
+//   .confirmpass label {
+//     text-align: left;
+//     color: #999;
+//     font-size: 1rem;
+//     text-transform: capitalize;
+//     margin-bottom: 0;
+//     margin-top: 10px;
+//     font-weight: 500;
+//     font-size: 14px;
+//     color: #111;
+//   }
+//   input::placeholder {
+//     text-transform: capitalize;
+//     font-size:12px;
+    
+//   }
+  
+//   .checkbox {
+//     display: flex;
+//     align-items: center;
+//   }
+//   .checkbox input {
+//     background-color: #999;
+//   }
+//   .checkbox label {
+//     margin: 0;
+//     padding-left: 5px;
+//     color: #111;
+//     font-size: 10px;
+//   }
+//   button {
+//     border: none;
+//     padding: 8px 35px;
+//     border-radius: 30px;
+//     background-color: #ffa21d;
+//     align-content: center;
+//     color: white;
+//     font-weight: 500;
+//     text-transform: capitalize;
+//     margin-top: 20px;
+//   }
+//   .loginbtn {
+//     font-size: 12px;
+
+    
+    
+//   }
+  
+//   .loginbtn span {
+//     color: #ffa21d;
+//     cursor: pointer;
+//     font-weight: 500;
+//   }
+//   .errormsg {
+//     color:   #dd583f;
+//     font-size: 10px;
+//     text-transform: capitalize;
+// }

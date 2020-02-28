@@ -1,0 +1,104 @@
+<section class="login container-fluid">
+  <section class="login-wrapper row d-flex justify-content-around">
+
+    <section class="form-wrapper col-md-6 col-sm-12   ">
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)" class="container">
+
+        <div class="logo ">
+          <img src="https://i.postimg.cc/1RNT06sr/logo.png" alt="">
+        </div>
+        <div class="email  ">
+          <i class="fas fa-user-alt"></i>
+          <input type="email" formControlName="email" placeholder="User email" class="col-12">
+        </div>
+
+        <div class="pass ">
+          <div class="password">
+            <i class="fas fa-lock"></i>
+            <input type="password" formControlName="password" placeholder="Password" class="col-12">
+          </div>
+        </div>
+
+        <div class="checkbox ">
+          <input type="checkBox" #logginOwner>
+          <label class="">I'm an owner</label>
+        </div>
+
+        <div class="errormsg" *ngIf="errorcheck">
+          <p>invalid email or password !</p>
+        </div>
+
+        <div class="button">
+          <button type="submit" [disabled]="myForm.invalid">
+            login
+          </button>
+        </div>
+
+        <div class="signup " routerLink="/register">
+          Don't have an account?
+          <span>sign up</span>
+        </div>
+
+      </form>
+    </section>
+  </section>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- light version -->
+<!-- <section class="login container-fluid">
+  <section class="login-wrapper row d-flex justify-content-around">
+   
+
+    <section class="form-wrapper col-md-6 col-sm-12   ">
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)" class="container">
+
+        <div class="logo ">
+          <img src="https://i.postimg.cc/1RNT06sr/logo.png" alt="">
+        </div>
+        <div class="email  ">
+          <i class="fas fa-user-alt"></i>
+          <input type="email" formControlName="email" placeholder="User email" class="col-12">
+        </div>
+
+        <div class="pass ">
+          <div class="password">
+            <i class="fas fa-lock"></i>
+            <input type="password" formControlName="password" placeholder="Password" class="col-12">
+          </div>
+          <p>forgot password?</p>
+        </div>
+
+        <div class="checkbox ">
+          <input type="checkBox" #logginOwner>
+          <label class="">I'm an owner</label>
+        </div>
+
+
+        <div class="errormsg" *ngIf="errorcheck">
+          <p>invalid email or password !</p>
+        </div>
+
+        <div class="button">
+          <button type="submit" [disabled]="myForm.invalid">
+            login
+          </button>
+        </div>
+
+        <div class="signup " routerLink="/register">
+          Don't have an account?
+          <span>sign up</span>
+        </div>
+
+
+      </form>
+    </section>
+  </section>
+</section> -->

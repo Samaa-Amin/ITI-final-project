@@ -1,0 +1,207 @@
+.gallary .thumb-style .thumb-img{
+  width: 23%;
+transition: all 0.3s ease-in-out;
+opacity: 0.5;
+
+}
+.thumb-style{
+  text-align: center;
+  padding-top: 20px;
+}
+img.selected{
+  opacity:1 !important;
+}
+.places-section{
+  padding-bottom: 30px;
+}
+.place-desc{
+  font-family: 'Poppins', sans-serif;
+  h1{
+    font-weight: 900;
+  }
+  .specificSpan{
+    font-weight: 700;
+  }
+}
+.games-section{
+  padding: 50px 0;
+  margin-bottom: 50px;
+  box-shadow:-1px -2px 16px 21px #dddddd9e;
+}
+.games-details:hover{
+box-shadow: -1px 7px 11px 3px #e8e5e580;
+}
+.games-details{
+  border: 1px solid #dddddda8;
+  .game-name{
+    background-color: #ffa21d;
+    color: #fff;
+    text-transform: capitalize;
+    text-align: center;
+  }
+  .game-img{
+    text-align: center;
+    height: 300px;///samaaaaaaaa
+  }
+}
+
+.game-img img{  ///samaaaaaaaaaaa
+  max-width: 100%;
+  max-height: 100%;
+}
+.game-price{
+  font-weight: 900;
+  color: #ffa21d;
+  font-size: 25px;
+  span{
+    font-weight: 100;
+    font-size: 15px;
+  }
+}
+.game-desc{min-height: 118px;}
+.subTotal-title{
+  font-size: 25px;
+  color:#d80707;
+  font-weight: 600;
+ span {
+  font-weight: 100;
+  font-size: 20px;
+  }
+}
+.OnlineBooking{
+  color: #00b467;
+  font-weight: 600;
+}
+
+.onlinBtn{
+  background-color: #ffa21d;
+  color: #fff;
+}
+.onlinBtn span{color: #fff;}
+
+// favourite
+.fa-heart{font-size: 30px;}
+.solid{
+  color: #dd583f;
+}
+// favourite
+polygon{
+  fill: #ffa21d;
+}
+.payment-btn{
+  background-color: #ffa21d;
+  border: #ffa21d;
+}
+.payment-btn:hover{
+  background-color: #ffa11d96;
+}
+.title{    
+  text-align: center;
+  color: #ffa21d;
+  font-size: 43px;}
+.games-card{padding-bottom: 30px;}
+.game-count{
+  text-align: center;
+  span{
+    padding: 5px 8px 8px;
+    border: 1px solid;
+  }
+}
+.nreaMe-section{
+  padding-bottom: 100px;
+ .title{
+  text-align: center;
+  color: #ffa21d;
+  font-size: 60px;
+  line-height: 1.5;
+  padding-bottom: 50px;
+  height: 84px;
+} 
+.imgs{
+  text-align: center;
+}
+}
+.container-self{
+  width: 90%;
+  margin: auto;
+}
+.status{
+  color: #00b467;
+  line-height: 1.2;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: bold;
+}
+.specific-progress{
+  display: inline-block;
+  height: 12px;
+  width: 24%;
+}
+.container-font{
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+.specific-progress-warning
+{
+  height: 20px;
+  display: inline-block;
+  background-color: #ffa21d;
+}
+.full-start-color{
+  color: #ffa21d;
+}
+.empty-start-color{color: #ddd;}
+.reviewsRange h3{
+  height: 45px;
+  font-size: 32px;
+  color: #ffa21d;
+  font-weight: normal;
+}
+.userComm-section{
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+.reviewsWrite{
+  color: #ffa21d;
+  font-size:25px
+}
+
+
+// media query 
+@media (min-width: 320px) and (max-width: 768px){
+.thumb-style{
+  display: none;
+}
+.reviewsWrite{
+  display: none;
+}
+.customize-btn{
+  background: #ffa21d;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  color: #fff;
+  height: 40px;
+  font-size: 11px;
+}
+::placeholder{
+  font-size: 10px;
+}
+.editBtnMob , .deleteBtnMob{
+  display: inline;
+}
+.deleteBtn , .editBtn{
+  display: none;
+}
+h5.userName{
+  font-size: 14px;
+  font-weight: 600;
+  
+}
+  }
+  .master-img2{
+    border-radius: 4%;
+  }

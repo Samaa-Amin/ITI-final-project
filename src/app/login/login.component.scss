@@ -1,0 +1,224 @@
+
+.login{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
+   background-image: linear-gradient(rgba(111, 111, 111, 0.5), rgba(111, 111, 111, 0.5)),  url("https://i.postimg.cc/26pXNcnN/carnival-3008102.jpg");
+}
+
+.form-wrapper{
+    background-color:#111;
+    height: 80vh;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    margin: 5rem;
+    border-radius: 30px;
+    margin-top: 6rem;
+}
+
+@media (max-width:500px){
+    .form-wrapper{
+        margin: 0;
+        border-radius: 0;
+    }
+}
+.logo {
+    color: #ffa21d;
+    margin-top: 0;
+    width: 30%;
+    margin: 0 auto;
+  }
+  .logo img {
+      max-width: 100%;
+  }
+form{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-content: center;
+    height: 70%;
+    width: 80%;
+    margin: 0 auto;
+}
+.email i , .password i{
+    color: #ffa21d;
+}
+.email , .password {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+}
+.email input , .password input {
+    border: none;
+    background:none;
+    padding: 10px;
+    color: #ddd;
+    font-size: 14px;
+}
+.pass p {
+    text-align: right;
+    color: #ddd;
+    font-size: 10px;
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    
+    
+}
+.checkbox input{
+    // background-color: #111;
+  
+}
+
+
+.checkbox label{
+    margin: 0;
+    padding-left: 15px;
+    color: #ddd;
+    font-size: 14px;
+}
+.checkbox label::placeholder{
+    font-size: 12px;
+    color: #ddd;
+}
+button{
+    border: none;
+    padding: 10px 40px;
+    border-radius: 30px;
+    background-color: #ffa21d;
+    align-content: center;
+    color: white;
+    text-transform: capitalize;
+    font-weight:500;
+}
+.signup {
+    color: #ddd;
+   
+    font-size: 12px;
+}
+.signup span{
+    color: #ffa21d;
+    cursor: pointer;
+    font-weight: 500;
+}
+.errormsg p{
+    color:   #dd583f;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+// @media (max-width:500px){
+//     .loginimg{
+//         display: none;
+//     }
+// }
+
+
+// light version
+
+// .login{
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-color: white;
+//    background-image: linear-gradient(rgba(111, 111, 111, 0.5), rgba(111, 111, 111, 0.5)),  url("https://i.postimg.cc/26pXNcnN/carnival-3008102.jpg");
+// }
+
+// .form-wrapper{
+//     background-color: rgba(255, 255, 255,0.9);
+//     height: 80vh;
+//     text-align: center;
+//     display: flex;
+//     flex-flow: column;
+//     justify-content: space-around;
+//     margin: 5rem;
+//     border-radius: 30px;
+//     margin-top: 6rem;
+// }
+
+// @media (max-width:500px){
+//     .form-wrapper{
+//         margin: 0;
+//         border-radius: 0;
+//     }
+// }
+// .logo {
+//     color: #ffa21d;
+//     margin-top: 0;
+//     width: 30%;
+//     margin: 0 auto;
+//   }
+//   .logo img {
+//       max-width: 100%;
+//   }
+// form{
+//     display: flex;
+//     flex-flow: column;
+//     justify-content: space-between;
+//     align-content: center;
+//     height: 70%;
+//     width: 80%;
+//     margin: 0 auto;
+// }
+// .email i , .password i{
+//     color: #ffa21d;
+// }
+// .email , .password {
+//     display: flex;
+//     border-bottom: 1px solid #999;
+//     align-items: center;
+// }
+// .email input , .password input {
+//     border: none;
+//     background:none;
+//     padding: 10px;
+//     color: #111;
+//     font-size: 14px;
+// }
+// .pass p {
+//     text-align: right;
+//     color: #111;
+//     font-size: 10px;
+// }
+// .checkbox{
+//     display: flex;
+//     align-items: center;
+// }
+// .checkbox input{
+//     background-color: #111;
+// }
+// .checkbox label{
+//     margin: 0;
+//     padding-left: 15px;
+//     color: #111;
+//     font-size: 12px;
+// }
+// .checkbox label::placeholder{
+//     font-size: 12px;
+// }
+// button{
+//     border: none;
+//     padding: 10px 40px;
+//     border-radius: 30px;
+//     background-color: #ffa21d;
+//     align-content: center;
+//     color: white;
+//     text-transform: capitalize;
+//     font-weight:500;
+// }
+// .signup {
+//     color: #111;
+   
+//     font-size: 12px;
+// }
+// .signup span{
+//     color: #ffa21d;
+//     cursor: pointer;
+//     font-weight: 500;
+// }
+// .errormsg p{
+//     color:   #dd583f;
+//     font-size: 14px;
+//     text-transform: capitalize;
+// }

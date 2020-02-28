@@ -1,0 +1,29 @@
+@import './../../styles.scss';
+.wrapper {
+    width: $wrapper;
+    padding: 20% 0;
+    .form-group {
+        p {
+            font-size: $paragrphSize;
+        }
+        label {
+            font-size: $paragrphSize;
+        }
+        input {
+            font-size: $paragrphSize;
+            margin-bottom: $pargraphMargin;
+        }
+        button {
+            font-size: $paragrphSize;
+        }
+        .email {
+            display: none;
+        }
+    }
+}
+
+.userName {
+    h1 {
+        font-size: 4rem;
+    }
+}
