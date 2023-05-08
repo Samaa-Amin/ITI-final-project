@@ -21,7 +21,7 @@
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
     "animate.css": "^3.7.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "json-server": "^0.16.0",
     "jw-angular-pagination": "^1.1.0",
     "ngx-owl-carousel-o": "^2.0.3",
